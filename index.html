@@ -154,9 +154,20 @@
       gap: 4px;
     }
   }
+
+.wrapper {
+  transform: scale(0.9); /* Shrinks everything inside */
+  transform-origin: top center; /* Keeps it centered */
+  width: 100%;
+  max-width: 480px; /* Avoid stretching too far */
+  margin: 0 auto;
+}
 </style>
 </head>
 <body>
+  <div class="wrapper">
+    <!-- Your game grid and elements go here -->
+</body>
   <h1>Block Puzzle Drag & Drop</h1>
 <h2 style="font-size: 30px;color: royalblue;">CREATED BY PRIYANSHU DUTTA</h2>
   <div id="score">Score: 0</div>
@@ -167,6 +178,7 @@
   <div id="game-over" role="alertdialog" aria-modal="true" aria-labelledby="game-over-title" tabindex="-1">
     <div id="game-over-title">Game Over!</div>
     <button id="play-again-button" aria-label="Play again">Play Again</button>
+  </div>
   </div>
   <style>
     .version-tag {
